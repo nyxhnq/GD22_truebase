@@ -838,8 +838,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Nargiza_GD22_truebase
-  metroPackageVersion: 
+  metroPackageName: NargizaGD22truebase
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -847,7 +847,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Nargiza_GD22_truebase
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Nargiza_GD22_truebase
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -914,7 +914,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: b5171540-6e6a-4179-ae86-d7cf05964813
   framebufferDepthMemorylessMode: 0
