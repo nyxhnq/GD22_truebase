@@ -140,8 +140,8 @@ Transform:
   m_GameObject: {fileID: 3514230221236745767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014000002, y: 0.7679999, z: 0.016}
-  m_LocalScale: {x: 0.94370157, y: 0.55205697, z: 0.5741163}
+  m_LocalPosition: {x: 0, y: 0.7679999, z: 0.016}
+  m_LocalScale: {x: 1.0018336, y: 0.55205697, z: 0.5741163}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8206845559616434097}
@@ -229,6 +229,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2327653547266929237}
+  - component: {fileID: 1456287186310230034}
+  - component: {fileID: 3723292139146513480}
   m_Layer: 0
   m_Name: CameraTarget
   m_TagString: Untagged
@@ -245,12 +247,45 @@ Transform:
   m_GameObject: {fileID: 4790327794089174305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.74, z: -0.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5989146225192980619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456287186310230034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790327794089174305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5fc9e7bb74cae4082a32b037b66abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 0.5
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  currentYaw: 0
+  currentPitch: 20
+--- !u!114 &3723292139146513480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790327794089174305}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38199d5cc6fc91042865b358798e315e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cmCamera: {fileID: 0}
+  minCameraDistance: 2
+  maxCameraDistance: 10
+  zoomSpeed: 0.5
 --- !u!1 &9156723270591713189
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +405,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5989146225192980619}
+  - component: {fileID: 6747648165990850828}
+  - component: {fileID: 2292940356164672283}
+  - component: {fileID: 3638562967125604798}
+  - component: {fileID: 2142727303996461384}
+  - component: {fileID: 3479950775925932665}
+  - component: {fileID: 3809883311875865222}
   m_Layer: 0
   m_Name: 'Player '
   m_TagString: Player
@@ -386,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 9160182936271148209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -394,3 +435,106 @@ Transform:
   - {fileID: 2327653547266929237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6747648165990850828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160182936271148209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90545e2bf8a55e744b436d32abd1eb6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: d8861f8c8221c6f4fa025be6d7ab5f89, type: 2}
+  currentHealth: 0
+  currentMana: 0
+--- !u!143 &2292940356164672283
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160182936271148209}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3638562967125604798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160182936271148209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b1198f9e983fd429bf311f6b67e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 6747648165990850828}
+  cameraTransform: {fileID: 2327653547266929237}
+  visualRoot: {fileID: 8206845559616434097}
+  gravity: -9.81
+  groundedGravity: -2
+  sprintMultiplier: 1.5
+--- !u!114 &2142727303996461384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160182936271148209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99437e7e6a320348a0a431273e64175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 6747648165990850828}
+  currentLevel: 1
+  currentExperience: 0
+  healthBonusPerLevel: 10
+  manaBonusPerLevel: 5
+  baseExperienceToNextLevel: 100
+  experienceGrowthFactor: 1.5
+--- !u!114 &3479950775925932665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160182936271148209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19225567a72b0a74d8953e5679c2ff01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progression: {fileID: 2142727303996461384}
+--- !u!114 &3809883311875865222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160182936271148209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27a4411ab882ba4ba20ba0fe636863f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 6747648165990850828}
