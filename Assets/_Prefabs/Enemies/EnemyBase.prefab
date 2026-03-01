@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7194990063559122710}
   - component: {fileID: 7489688835455637592}
   - component: {fileID: 9049953195997222000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5245404094029424834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.49900007, z: 0.396}
+  m_LocalPosition: {x: 0, y: 0.49900007, z: 0.285}
   m_LocalScale: {x: 0.39012006, y: 0.39012006, z: 0.39012}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 6085803196440754721}
   - component: {fileID: 7149448705068741017}
   - component: {fileID: 4150128563047991888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6099590238039309121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
