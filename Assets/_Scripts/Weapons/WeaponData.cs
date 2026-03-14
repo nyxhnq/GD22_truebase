@@ -54,4 +54,7 @@ public class WeaponData : ScriptableObject
     [Header("Снаряды (для дальнего боя)")]
     [Tooltip("Префаб снаряда (для лука/магии). Может быть пустым для ближнего боя.")]
     public GameObject projectilePrefab;
+
+    [Tooltip("Скорость снаряда")]
+    public float projectileSpeed = 20f;
 }

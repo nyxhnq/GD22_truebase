@@ -21,4 +21,5 @@ MonoBehaviour:
   knockbackForce: 0
   attackAnimationName: 
   attackSound: {fileID: 0}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 6637555127669531752, guid: 7e54b8de044d67e43aaec62b499e0fa7, type: 3}
+  projectileSpeed: 20

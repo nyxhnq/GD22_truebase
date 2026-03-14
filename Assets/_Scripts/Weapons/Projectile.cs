@@ -18,12 +18,15 @@ public class Projectile : MonoBehaviour
     [Tooltip("—лои, по которым может быть нанесЄн урон.")]
     [SerializeField] LayerMask hitLayers;
 
-    public float Damage => damage;
-    public float MaxDistance => maxDistance;
-    public LayerMask HitLayers => hitLayers;
-    public float Speed => speed;
-
     private Vector3 _startPosition;
+
+    public void Setup(float damage, float maxDistance, float speed, LayerMask hitLayers)
+    {
+        this.damage = damage;
+        this.maxDistance = maxDistance;
+        this.speed = speed;
+        this.hitLayers = hitLayers;
+    }
 
     private void Start()
     {

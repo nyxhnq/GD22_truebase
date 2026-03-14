@@ -18,24 +18,14 @@ public abstract class WeaponBase : MonoBehaviour
     // Время, когда оружие снова готово атаковать (Time.time)
     protected float nextAttackTime = 0f;
 
-    /// <summary>
-    /// Текущий урон оружия, удобный геттер к WeaponData.
-    /// </summary>
-    public float Damage => weaponData != null ? weaponData.damage : 0f;
+    public float Damage => weaponData.damage;
 
-    /// <summary>
-    /// Текущая дальность оружия.
-    /// </summary>
-    public float Range => weaponData != null ? weaponData.range : 0f;
+    public float Range => weaponData.range;
 
-    /// <summary>
-    /// Скорость атаки (атак в секунду).
-    /// </summary>
-    public float AttackSpeed => weaponData != null ? weaponData.attackSpeed : 1f;
+    public float AttackSpeed => weaponData.attackSpeed;
 
-    /// <summary>
-    /// Можно ли сейчас атаковать (учитывает перезарядку и наличие WeaponData).
-    /// </summary>
+    public float ProjectileSpeed => weaponData.projectileSpeed;
+
     public virtual bool CanAttack()
     {
         if (weaponData == null)

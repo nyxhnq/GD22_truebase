@@ -52,17 +52,10 @@ public class RangedWeapon : WeaponBase
         );
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
-        //if (projectile != null)
-        //{
-        //    projectile.Damage = Damage;
-        //    projectile.MaxDistance = Range;
-        //    projectile.HitLayers = projectileHitLayers;
-
-        //    if (projectileSpeedOverride > 0f)
-        //    {
-        //        projectile.speed = projectileSpeedOverride;
-        //    }
-        //}
+        if (projectile != null)
+        {
+            projectile.Setup(Damage, Range, weaponData.projectileSpeed, projectileHitLayers);
+        }
 
         Debug.Log($"{name}: дальняя атака, выпущен снаряд с уроном {Damage} и дальностью {Range}.");
     }

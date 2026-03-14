@@ -59,8 +59,8 @@ public class WeaponManager : MonoBehaviour
         if (InputManager.Instance != null)
         {
             InputManager.Instance.OnAttackPressed += HandleAttackPressed;
-            //InputManager.Instance.OnWeaponNextPressed += SwitchToNextWeapon;
-            //InputManager.Instance.OnWeaponPrevPressed += SwitchToPrevWeapon;
+            InputManager.Instance.OnWeaponNextPressed += SwitchToNextWeapon;
+            InputManager.Instance.OnWeaponPrevPressed += SwitchToPrevWeapon;
         }
     }
 
@@ -69,8 +69,8 @@ public class WeaponManager : MonoBehaviour
         if (InputManager.Instance != null)
         {
             InputManager.Instance.OnAttackPressed -= HandleAttackPressed;
-            //InputManager.Instance.OnWeaponNextPressed -= SwitchToNextWeapon;
-            //InputManager.Instance.OnWeaponPrevPressed -= SwitchToPrevWeapon;
+            InputManager.Instance.OnWeaponNextPressed -= SwitchToNextWeapon;
+            InputManager.Instance.OnWeaponPrevPressed -= SwitchToPrevWeapon;
         }
     }
 
@@ -114,23 +114,23 @@ public class WeaponManager : MonoBehaviour
     /// <summary>
     /// Переключиться на следующее оружие в списке доступных (кнопка 2).
     /// </summary>
- 
-    //private void SwitchToNextWeapon()
-    //{
-    //    if (availableWeapons.Count == 0) return;
-    //    currentAvailableIndex = (currentAvailableIndex + 1) % availableWeapons.Count;
-    //    EquipByEnableDisable(availableWeapons[currentAvailableIndex]);
-    //}
 
-    ///// <summary>
-    ///// Переключиться на предыдущее оружие в списке доступных (кнопка 1).
-    ///// </summary>
-    //private void SwitchToPrevWeapon()
-    //{
-    //    if (availableWeapons.Count == 0) return;
-    //    currentAvailableIndex = (currentAvailableIndex - 1 + availableWeapons.Count) % availableWeapons.Count;
-    //    EquipByEnableDisable(availableWeapons[currentAvailableIndex]);
-    //}
+    private void SwitchToNextWeapon()
+    {
+        if (availableWeapons.Count == 0) return;
+        currentAvailableIndex = (currentAvailableIndex + 1) % availableWeapons.Count;
+        EquipByEnableDisable(availableWeapons[currentAvailableIndex]);
+    }
+
+    /// <summary>
+    /// Переключиться на предыдущее оружие в списке доступных (кнопка 1).
+    /// </summary>
+    private void SwitchToPrevWeapon()
+    {
+        if (availableWeapons.Count == 0) return;
+        currentAvailableIndex = (currentAvailableIndex - 1 + availableWeapons.Count) % availableWeapons.Count;
+        EquipByEnableDisable(availableWeapons[currentAvailableIndex]);
+    }
 
     private void HandleAttackPressed()
     {
